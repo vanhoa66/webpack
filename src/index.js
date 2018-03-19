@@ -1,8 +1,14 @@
 const React = require("react"),
-    ReactDOM = require("react-dom");
+    ReactDOM = require("react-dom"),
+    Main = require("./components/main"),
+    { Provider } = require("react-redux"),
+    store = require("./store.js");
+
 
 
 ReactDOM.render(
-    <h2>hello</h2>,
+    <Provider store={store}>
+        <Main />
+    </Provider>,
     document.getElementById("root")
 );
